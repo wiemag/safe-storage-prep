@@ -6,7 +6,7 @@
 # It encrypts them with gpg and creates md5 check sums of the created gpg files.
 # It stores the sums for future references. 
 # Only files/folders whose check sums have been modified are then uploaded/stored again.
-VERSION="0.1"
+VERSION="0.2"
 CDIR="$HOME/.config/safe-storage" 	# Configuration/check-sums directory
 CONF="${CDIR}/sf.conf" 				# Configuration file
 #LOGF="${CDIR}/sf.log" 				# Log file
@@ -98,7 +98,7 @@ fi
 
 p=$(pwd)
 cd $SDIR
-echo -e "\n\e[1mWarning!\e[0m The already existent *gpg files will be removed."
+echo -e "\n\e[1mNote:\e[0m For new tar.xz.gpg files (if any) \nlook in \e[33m$SDIR\e[0m."
 for ((t=15;--t;)) {
 	echo -en "\rContinue? (Y/n) [\e[33m$t\e[0m sek] "
 	read -rsn1 -t1 Q && break

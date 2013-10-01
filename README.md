@@ -24,19 +24,17 @@ or
 
 	safe-storage-prep.sh -h
 
-The script creates md5 check sums for the folders and files to be safely stored and compares the sums to the previously created check sums before creating \*.tar.xz.gpg files. The check sums are stored in a file in 
+The script creates md5 check sums for the folders and files to be safely stored and compares the sums to the previously created check sums before creating \*.tar.xz.gpg files. The check sums are stored in file 
 
 	/$HOME/.config/md5s.
 
 To work faster, the script does not create .tar.xz.gpg files if the check sums for a given folder or file has not changed.
 
-If you want to force the script to create a .tar.xz.gpg file modify 
+If you want to force the script to create a .tar.xz.gpg file modify a chosen check sum in the
 
 	/$HOME/.config/safe-storage-prep/md5s 
 
 file, or delete it to force a complete re-creation of all gpg's.
-
-Warning! Any \*.tar.xz files that are already in the directory's first level when the script starts may be removed when their core name matches the name of a folder or file that will be prepared for safe storage.
 
 
 INSTALLATION
